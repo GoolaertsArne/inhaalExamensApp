@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>InhaalExamens</title>
+</head>
+<body>
+  <h2>Edit inhaalexamen</h2>
+  <br/><br/>
+ <form action="/inhaalexamens/edit" method="POST">
+  <table>
+    <tr><td>Student : </td><td><input type='text' name='student' value="<%= exaam.student %>"></td></tr>
+    <tr><td>Examen : </td><td><input type='text' name='examen' value="<%= exaam.exaam %>"></td></tr>
+    <tr><td>Reden : </td><td><input type='text' name='reden' value="<%= exaam.reden %>"></td></tr>
+    <tr><td>Date : </td><td><input type='date'  name='datum' value="<%= exaam.datum %>" size=100></td></tr>
+    <tr><td><button type='submit'>Confirm</button></td></tr>
+  </table> 
+   </form>
+</body>
+</html>

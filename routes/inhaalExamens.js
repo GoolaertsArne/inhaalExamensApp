@@ -65,10 +65,23 @@ router.post('/delete', (req, res) =>{
   )
   })
 
+
+  //RENDER EDIT FORM 
+  router.get('/edit', (req,res) => {
+    var query = { student: req.query.student }
+    db.collection('inhaal').findOne(query, (err,result) =>{
+      res.render('edit.ejs', {exaam: result})
+    })
+  })
+
   
 /* EDIT A PRODUCT */
 router.post('/edit', (req, res) => {
-  db.collection('inhaal').replaceOne({ name: req.body.name }, req.body)
+  console.log({ student: req.body })
+  db.collection('inhaal').replaceOne({ student: req.body.student }, req.body) 
+  console.log(req.body)
+  res.redirect('/')
+
 })
 })
 
