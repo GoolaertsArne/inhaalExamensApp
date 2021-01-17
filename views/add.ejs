@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Inhaalexamens</title>
+</head>
+<body>
+<div>
+  <h2>Add an inhaalexamen</h2>
+  <br/><br/>
+  <form action='/inhaalexamens/add' method='POST'>
+   <table>
+     <tr><td>Student : </td><td><input type='text' name='student'></td></tr>
+     <tr><td>Examen : </td><td><input type='text' name='examen'></td></tr>
+     <tr><td>Reden : </td><td><input type='text' name='reden'></td></tr>
+     <tr><td>Date : </td><td><input type='date' value ="today" name='datum' size=100></td></tr>
+     <tr><td><button type='submit'>Add</button></td></tr>
+   </table>
+  </form>
+</div>
+</body>
+</html>
+

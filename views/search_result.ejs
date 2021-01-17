@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>InhaalExamens</title>
+</head>
+<body>
+  <h2>Result</h2>
+  <br/><br/>
+  
+  <p>
+    <span>Student: <%= exaam.student %> </span> <br>
+    <span> Examen: <%= exaam.exaam %></span><br>
+    <span> Reden: <%= exaam.reden %></span><br>
+    <span> Date : <%= exaam.datum %></span><br>
+  
+
+  </p>
+  <form action='/inhaalexamens/delete' method='POST' onsubmit="return confirm('Bent U zeker?');">
+    <span><input type='hidden' name ='_id' value='<%=exaam._id%>'></span> 
+    <span><button type="submit">Delete</button></span>
+   </form>
+ 
+
+</body>
+</html>
