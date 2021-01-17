@@ -9,17 +9,22 @@
   <br/><br/>
   
   <p>
-    <span>Student: <%= exaam.student %> </span> <br>
-    <span> Examen: <%= exaam.exaam %></span><br>
-    <span> Reden: <%= exaam.reden %></span><br>
-    <span> Date : <%= exaam.datum %></span><br>
-  
-
+    <ul>
+      <% examens.forEach(function(exaam) { %>
+        <li>
+          <span>Student: <%= exaam.student %> </span> <br>
+          <span> Examen: <%= exaam.examen %></span><br>
+          <span> Reden: <%= exaam.reden %></span><br>
+          <span> Date : <%= exaam.datum %></span><br>
+          <form action='/inhaalexamens/delete' method='POST' onsubmit="return confirm('Bent U zeker?');">
+            <span><input type='hidden' name ='_id' value='<%=exaam._id%>'></span> 
+            <span><button type="submit">Delete</button></span>
+           </form>
+        </li>
+      <% }) %>
+    </ul>
   </p>
-  <form action='/inhaalexamens/delete' method='POST' onsubmit="return confirm('Bent U zeker?');">
-    <span><input type='hidden' name ='_id' value='<%=exaam._id%>'></span> 
-    <span><button type="submit">Delete</button></span>
-   </form>
+
  
 
 </body>
